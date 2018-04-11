@@ -1,0 +1,231 @@
+/* 小屏幕（平板，大于等于 768px） */ 
+ 
+@media (min-width:768px) {
+  /*首页底部菜单footer*/
+ .footer{
+ 	font-size: 1rem;
+ }
+ .menu_footer{
+ 	overflow: hidden;
+ }
+ .menu_footer li{
+ 	width: 50%;
+ 	float: left;
+ }
+  
+  .menu_footer li.tl{
+  	text-align: left;
+  	padding-left: 12px;
+  }
+  .menu_footer li.tr{
+  	text-align: right; 
+  	padding-right: 12px;
+  }
+  
+  /*wcc*/
+ /*主体内容*/
+	/* 热销产品 */
+   
+  .hot_product_01{
+  	padding: 0px 10%;
+  }
+  /* 产品分类 */
+	.product_classification_list{
+		width:70%;
+		margin:0 auto;
+		margin-top: 24px;
+	}
+		/* 中意动态 */
+	.dynamic_02{
+		margin-top: 0;
+	}
+	/*----------------商城首页---------------------*/
+	
+	.hot_pro{
+		padding:35px 0px;
+	}
+	.hot_pro_list li h1{
+		font-size: 1.2rem;
+		padding: 10px 10px 4px 10px; 
+	}
+	.hot_pro_list li h2,.hot_pro_list li p{
+		font-size: 1rem;
+		padding: 0px 10px; 
+	padding-right: 50px;
+	}
+	.hot_pro_list li i{
+		right: 10px;
+		bottom: 15px;
+	}
+	/*商城列表*/
+  .shop_nav_list li{
+  	padding-left: 40px;
+  }
+	.shop_list_des li{
+		width: 100%;
+	}
+	.shop_list ul>li .shop_section dl,.shop_des{
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	/* 股东 */
+	.shareholder_img .addpaddingl{
+		padding-left: 15px;
+	}
+	.shareholder_img .addpaddingr{
+		padding-right: 15px;
+	}
+	
+	/*  商城详情页-内容导航  */
+	.content_main_nav li{
+		padding: 0 10px;
+	}
+	/* 关爱 */
+	.culture_list li{
+		width:83%;
+		margin-bottom: 24px;
+		margin-left: 8.3%;
+	}
+	
+	
+	/* 荣誉 */
+	.honor_list li{
+		width:50%;
+		margin-top: 30px;
+		float: left;
+		padding: 0 15px;
+	}
+	.honor_list li img{
+		width: 100%;
+	}
+	.honor_list li div{
+		width:100%;
+		height:110px; 
+		padding-left:15px;
+		padding-right:15px;
+		border-left:1px solid #ddd;
+		margin-top: 20px;
+		overflow: hidden;
+	}
+	
+	/* 企业社会责任 */
+	.main_list_lunbo{
+		width: 83%;
+		margin-left: 8.3%;
+	}
+	
+	/* 健康期刊 */
+	.service_periodical_select {
+		padding-top: 17px;
+	}
+	.service_periodical_list li{
+		margin-top: 5px;
+		padding: 0 5px 0 5px;
+	}
+	.periodical_list_shadow h3{
+		font-size: 18px;
+		left:8px;
+	}
+	.list_shadow_time{
+		left:8px;
+	}
+	.periodical_list_shadow a{
+		font-size: 26px;
+	}
+	
+
+	/* 健康管理 */
+	.service_health_nav{
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	.service_health_nav a{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.service_health_list{
+		margin-top: 15px;
+	}
+	.service_health_list li{
+		margin-top: 7px;
+		padding-left: 7px;
+		padding-right: 7px;
+	}
+	.health_list_img{
+		border-radius: 10px;
+	}
+	.health_list_date{
+		left:7%;
+	}
+	.friend_link{
+		width:100%;
+		background: #f5f5f5;
+		margin-top: 22px;
+		margin-bottom: 22px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		overflow: hidden;
+	}
+	.friend_link li{
+		width:100%;
+		height:90px;
+		margin-top: 23px;
+		position: relative;
+	}
+	.friend_link_icon{
+		width:14%;
+	}
+	.friend_link_line{
+		left:14%;
+	}
+	.friend_link_content{
+		width: 86%;
+	}
+		
+		
+	/* 员工风采 */
+	.staff_style_one img{
+		width:70%;
+		margin-right: 4%;
+	}
+	
+	/* 个人风采 */
+	.personal_style_list{
+		width:83%;
+		margin-top: 8px;
+		margin-left: 8.3%
+	}
+	/* 空缺职位 */
+	.selection_mechanism_div{
+		width:49%;
+	}
+	.margin_right{
+		margin-right: 2%;
+	}
+
+	/* 人才理念 */
+
+	.talent_mindset_list img{
+		display:block;
+		width:36%;
+		margin:0 4%;
+		float: left;
+	}
+
+	.mindset_list_wen{
+		width:56%;
+		box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		/*IE*/
+		-moz-box-sizing: border-box;
+		/* Firefox */
+		-webkit-box-sizing: border-box;
+		/* Safari */
+		padding-left: 30px;
+		padding-right: 8px;
+		margin-top:34px;
+		float: left;
+	}
+	
+	
+}

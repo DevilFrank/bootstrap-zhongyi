@@ -1,0 +1,67 @@
+/* 超小屏幕（手机，小于 768px） */
+
+
+/* 没有任何媒体查询相关的代码，因为这在 Bootstrap 中是默认的（还记得 Bootstrap 是移动设备优先的吗？） */
+
+@media (max-width:768px) {}
+#share_icon{
+	display: none;
+}
+.bdsharebuttonbox {
+	width: 100%;
+	text-align: right;
+}
+.bdshare_popup_box{
+	display: none!important;
+	
+}
+.share{
+	display: inline-block;
+	vertical-align: middle;
+	font-size:1.1rem;
+	color:#fff;
+	line-height: 50px;  
+	text-align: right;
+}
+.bds_qzone,.bds_tsina,.bds_weixin,.bds_sqq{
+	display: inline-block;
+	width:22px;
+	height: 22px;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+.bds_qzone{
+	background:url('../images/icon_qzone.png') no-repeat;
+	background-size: 100%;
+}
+.bds_tsina{
+	background:url('../images/icon_tsina.png') no-repeat;
+	background-size: 100%;
+}
+.bds_weixin{
+	background:url('../images/icon_weixin.png') no-repeat;
+	background-size: 100%;
+}
+.bds_sqq{
+	background:url('../images/icon_qq.png') no-repeat;
+	background-size: 100%;
+}
+@media (min-width:992px) {
+.share{
+		    font-size: 1.3rem;
+    color: #fff;
+    line-height: 80px; 
+	}
+}
+@media (min-width:992px) {
+.share{
+		font-size: 1.3rem;
+    color: #fff;
+    line-height: 80px; 
+	}
+	.bds_qzone,.bds_tsina,.bds_weixin,.bds_sqq{
+	display: inline-block;
+	width:24px;
+	height: 24px;
+	}
+	}

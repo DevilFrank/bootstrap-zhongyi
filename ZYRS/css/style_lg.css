@@ -1,0 +1,16 @@
+/* 大屏幕（大桌面显示器，大于等于 1200px） */
+@media (min-width:1200px) {
+	 .periodical_select_year{
+			left:60%;
+		}
+		.service_periodical_select>p{
+			padding-right: 0;
+			padding-left: 50px;
+		}
+	.product_content_nav ul{
+		width:1170px;
+	}
+	.product_content_feature,.product_content_appropriate,.product_content_suitable,.policy_guidance{
+		width:1170px;
+	}
+}

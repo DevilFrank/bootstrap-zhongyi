@@ -1,0 +1,166 @@
+<!--mobile 移动导航-->
+<nav id="menu" class="menu">
+	<div class="mobile_nav">
+		<ul class="nav_section">
+
+			<li class="Selected">
+				<a href="${base}/">首页</a>
+			</li>
+			[@cms_channel_list] [#list tag_list as a]
+			<li>
+				[@cms_channel_list parentId=a.id][#if tag_list?size>0]
+				<a href="javascript:;">[#else]
+					<a href="${a.url}">[/#if]${a.name}</a>[/@cms_channel_list] [@cms_channel_list parentId=a.id][#if tag_list?size>0]
+					<ul class="second_menu">
+
+						[@cms_channel_list parentId=a.id] [#list tag_list as b]
+						<li>
+							[@cms_channel_list parentId=b.id][#if tag_list?size>0]
+							<a href="javascript:;">[#else]
+								<a href="${b.url}">[/#if]${b.name}</a>[/@cms_channel_list] [@cms_channel_list parentId=b.id][#if tag_list?size>0]
+								<ul class="second_menu">
+									[@cms_channel_list parentId=b.id] [#list tag_list as c]
+									<li>
+										<a href="${b.url}">${c.name}</a>
+									</li>
+									[/#list] [/@cms_channel_list]
+								</ul>
+								[/#if] [/@cms_channel_list]
+
+						</li>
+						[/#list] [/@cms_channel_list]
+
+					</ul>[/#if] [/@cms_channel_list]
+
+			</li>
+			[/#list] [/@cms_channel_list]
+
+		</ul>
+		<section class="mobile_seciont">
+			<!--客服热线-->
+			<div class="hot_main">
+				<div class="hot_tel">
+					<h1 class="">客服热线</h1>
+					<div class="hot_tel_section">
+						<p>全国客服热线及咨询投诉电话</p>
+						<a href="tel:400-800-9888">400-800-9888</a>
+						<p>团体保险客户服务热线</p>
+						<a href="tel:400-800-7555">400-800-7555</a>
+						<p>全国电话营销热线</p>
+						<a href="tel:950956">400-800-7555</a>
+					</div>
+				</div>
+				<!--中英文网站-->
+				<p class="change_lan">ENG <span><a href="#" class="fl"></a><a class="checked" href="#" class="fr"></a></span>ENG</p>
+			</div>
+			<!--搜索框-->
+			<p class="btn_search"><input type="text" /><i class="iconfont icon-sousuokuangsousuo"></i></p>
+		</section>
+	</div>
+
+</nav>
+
+<div class="header">
+	<!--移动导航-->
+	<div class="mobil_header">
+		<a href="#menu" class="icon_slider iconfont icon-caidan"></a>
+		<a href="${base}/"><img class="logo_mobile" src="/r/cms/www/images/img_logo.png" alt="" /></a>
+	</div>
+	<!--pc导航-->
+	<div class="wrapper_content visible-md visible-lg">
+		<!--pclogo-->
+		<a href="${base}/" class="pc_logo"><img src="/r/cms/www/images/img_logo.png" /></a>
+		<div class="pc_header_right">
+			<div class="pc_header_rt">
+				<div class="pc_hot_tel">客服热线
+					<ul class="pc_tel_section">
+						<li>
+							<p>全国客服热线及咨询投诉电话</p>
+							<span>400-800-9888</span>
+						</li>
+						<li>
+							<p>团体保险客户服务热线</p>
+							<span>400-800-7555</span>
+						</li>
+						<li>
+							<p>全国电话营销热线</p>
+							<span>950956</span>
+						</li>
+					</ul>
+				</div>
+				<p class="change_size"><span class="small_font_size">A</span><span class="middle_font_size">A</span><span class="big_font_size">A</span></p>
+				<p class="pc_change_lag">ENGLISH</p>
+				<div class="icon_seach">
+					<i class="iconfont icon-sousuokuangsousuo pc_btn_search"></i>
+					<div class="pc_search_box">
+						<input type="text" />
+						<i class="iconfont icon-sousuokuangsousuo"></i>
+					</div>
+				</div>
+
+			</div>
+			<div class="menu-wrapper main_menu_wrapper">
+				<nav class="navbar yamm navbar-default " role="navigation">
+					<ul class="nav navbar-nav menu">
+						[@cms_channel_list] [#list tag_list as a]
+						
+						<li [#if channel??&&channel.id==a.id]class="dropdown first_level_menu nav_${a_index+1} clicked" [#else] class=" dropdown first_level_menu nav_${a_index+1}"[/#if]>
+							
+							[@cms_channel_list parentId=a.id][#if tag_list?size>0]<a class="first_nav dropdown-toggle" href="javascript:;" data-toggle="dropdown">[#else]<a class="first_nav dropdown-toggle" href="${a.url}" data-toggle="dropdown">[/#if][/@cms_channel_list]
+							${a.name} </a>
+							[@cms_channel_list parentId=a.id][#if tag_list?size>0]
+							<ul class="dropdown-menu menu_second_part" role="menu">
+								<li class="menu_container_li wrapper_content">
+									<div class="sectond_content">
+										<ul>
+											[@cms_channel_list parentId=a.id][#list tag_list as b] [@cms_channel_list parentId=b.id][#if tag_list?size>0]
+											
+											<li [#if channel??&&channel.id==b.id]class="dropdown sign" [#else] class=" dropdown"[/#if] >[#else]
+												<li [#if channel??&&channel.id==b.id]class="second_nav sign" [#else] class=" second_nav"[/#if] >[/#if][/@cms_channel_list] 
+													[@cms_channel_list parentId=b.id][#if tag_list?size>0]
+													<a href="javascript:;" class="dropdown-toggle">[#else]
+														<a class="second_title" href="${b.url}">[/#if]${b.name}</a>[/@cms_channel_list] [@cms_channel_list parentId=b.id][#if tag_list?size>0]
+														<ul class="dropdown-menu menu_third_part">
+															<li>
+																<div class="sectond_content">
+																	<ul>
+																		[@cms_channel_list parentId=b.id] [#list tag_list as c]
+																		<li [#if channel??&&channel.id==c.id]class=" sign"[/#if]>
+																			<a href=" ${c.url}">${c.name}</a>
+																		</li>
+																		[/#list] [/@cms_channel_list]
+
+																	</ul>
+																</div>
+														</ul>
+														[/#if][/@cms_channel_list]
+
+														</li>
+
+														[/#list] [/@cms_channel_list]
+										</ul>
+									</div>
+									<div class="right_pic">
+													<img src="/r/cms/www/images/img_nav_right${a_index+1}.png" alt="" />
+													<p>${a.name}</p>
+													<a href="${a.url}">查看更多</a>
+												</div>
+									</li>
+
+							</ul>
+							[/#if][/@cms_channel_list]
+							</li>
+
+							[/#list][/@cms_channel_list]
+
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<!--pc导航end-->
+</div>
+<script>
+	
+	
+</script>
